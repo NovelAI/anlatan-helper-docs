@@ -18,11 +18,6 @@
   ul { padding-left:1.2em; }
   li { margin:.35em 0; }
   nav { margin-bottom:24px; font-size:.95rem; }
-  .table-wrap { overflow-x:auto; }
-  table { width:100%; border-collapse:collapse; margin:1em 0; font-size:.95rem; }
-  th,td { text-align:left; padding:8px 10px; border:1px solid var(--line); vertical-align:top; }
-  th { background:#0b0d12; }
-  code { background:#0b0d12; padding:1px 6px; border-radius:5px; font-size:.9em; }
   footer { color:var(--muted); font-size:.9rem; margin-top:48px; border-top:1px solid var(--line); padding-top:16px; }
 </style>
 </head>
@@ -30,81 +25,64 @@
 <div class="wrap">
   <nav><a href="index.html">&larr; Anlatan Helper</a> · <a href="terms.html">Terms of Service</a></nav>
   <h1>Privacy Policy</h1>
-  <p class="muted">Effective 2026-11-10. Anlatan Helper ("the bot", "we") is a moderation
-     bot operated by Anlatan within our Discord server. This policy explains, to you
-     as a member of that server, what data the bot accesses and how it is handled.</p>
+  <p class="muted">Effective 2026-11-10. Anlatan Helper ("the bot", "we") is a moderation bot
+     operated by Anlatan in the Anlatan Discord server. This policy explains what information the
+     bot handles and why.</p>
 
-  <h2>1. Scope</h2>
-  <p>This policy covers Anlatan Helper as it operates in the Anlatan Discord server. It applies to
-     members of that server. The bot is private and is not offered for use in other servers.</p>
-
-  <h2>2. What we access</h2>
+  <h2>1. What we collect</h2>
   <ul>
-    <li><strong>When you join.</strong> Your user ID, username and account creation date, which
-        the bot checks against the server's join rules (minimum account age and staff-maintained
-        allow and block lists). Receiving join events requires Discord's Server Members intent.</li>
-    <li><strong>When you change your name.</strong> Your old and new username, display name or
-        server nickname, so staff can spot impersonation and recognise members who leave and
-        rejoin under a different name.</li>
-    <li><strong>The member list.</strong> Kept in memory so staff tools can match usernames, for
-        example when checking a list of users or adding a role to many members at once.</li>
-    <li><strong>Message text, in one place only.</strong> In channels where staff have restricted
-        link previews, the bot reads messages to find links. Reading message text requires
-        Discord's Message Content intent.</li>
+    <li><strong>Account information:</strong> your Discord user ID, username, display name,
+        server nickname and account creation date.</li>
+    <li><strong>Name changes:</strong> changes to your username, display name or nickname while
+        you are a member of the server.</li>
+    <li><strong>Messages, in limited cases:</strong> in some channels, the bot checks messages
+        for links in order to manage link previews.</li>
   </ul>
-  <p>The bot does <strong>not</strong> use the Presence intent and does not access your online
-     status, activity, voice activity, or anything from outside Discord. It does not read direct
-     messages you send it. It may send you a direct message: a welcome message when you join, or
-     a short explanation before it removes your account, depending on the server's settings.</p>
+  <p>The bot does not collect your online status, activity or voice activity, and it does not
+     read direct messages you send it.</p>
 
-  <h2>3. How we use and retain data</h2>
-  <div class="table-wrap">
-  <table>
-    <tr><th>Data</th><th>Use</th><th>Retention</th></tr>
-    <tr><td>Member list and ban list</td><td>Match usernames for staff tools; check whether a user is banned</td><td>In memory only; discarded when the bot restarts</td></tr>
-    <tr><td>Account details at join (user ID, username, account age)</td><td>Decide whether the account may stay</td><td>Evaluated in memory; the outcome is posted to a moderator-only log channel</td></tr>
-    <tr><td>Automatic removal records (user ID, username, reason, time)</td><td>Staff review and the statistics panel</td><td>User ID and username deleted after 45 days; an anonymous count remains</td></tr>
-    <tr><td>Name changes (user ID, old and new name, time)</td><td>Impersonation checks and staff lookups</td><td>45 days</td></tr>
-    <tr><td>Last-known username and display name</td><td>Recognise members who leave and rejoin under a new name</td><td>While you are a member, then 45 days after you leave</td></tr>
-    <tr><td>Allow and block list entries (user ID or username, added by staff)</td><td>Apply the server's join rules</td><td>Until staff remove the entry</td></tr>
-    <tr><td>Message text in link-restricted channels</td><td>Find links and remove their previews</td><td>Processed in memory and never stored by the bot</td></tr>
-    <tr><td>Moderation records (join decisions, removals, name changes, messages whose preview was removed, up to 1,000 characters)</td><td>Posted to private moderator-only log channels for human review</td><td>Stored within Discord, in the server's moderator-only channels</td></tr>
-    <tr><td>Server settings (channel, role and server IDs, allowed link domains)</td><td>Configure the bot</td><td>Until changed or removed by staff</td></tr>
-    <tr><td>Operational logs (may include user IDs, usernames and message IDs)</td><td>Monitor reliability and troubleshoot</td><td>Console output on the bot host</td></tr>
-  </table>
-  </div>
+  <h2>2. How we use it</h2>
+  <p>We use this information to keep the server safe and moderated: screening new members,
+     preventing impersonation and ban evasion, and helping moderators manage the server. The bot
+     may send you a direct message, for example a welcome message or the reason for a moderation
+     action.</p>
 
-  <h2>4. Storage and security</h2>
+  <h2>3. How long we keep it</h2>
   <ul>
-    <li>The records listed above with a retention period are kept in a database on private
-        infrastructure that only the bot's operators can access. A daily job deletes them when
-        their period ends.</li>
-    <li>Message text is never written to the bot's database. The only copies of member messages
-        the bot makes are moderation records inside the server's own moderator-only channels.</li>
-    <li>Credentials (the bot token) are stored as host environment configuration, never in source
-        code, and are not shared with third parties.</li>
-    <li>The bot does not sell, rent, or share data with any third party, and no analytics or
-        advertising services are used. Data the bot accesses is <strong>never used to train
-        machine learning or AI models</strong>.</li>
+    <li>Records that identify you, such as name changes and moderation actions, are deleted from
+        our systems after <strong>45 days</strong>.</li>
+    <li>Your current username and display name are kept while you are a member, and deleted
+        45 days after you leave.</li>
+    <li>Moderation list entries added by staff are kept until staff remove them.</li>
+    <li>Moderation logs, which can include the message that led to an action, are posted in the
+        server's staff-only channels and stay there until staff delete them.</li>
+    <li>Anonymous statistics that cannot identify you may be kept longer.</li>
   </ul>
+  <p>Message content is never stored in our systems.</p>
 
-  <h2>5. Children's privacy</h2>
-  <p>The bot is intended for use in communities that comply with Discord's minimum age requirements
-     and is not directed at children under those requirements.</p>
+  <h2>4. Sharing</h2>
+  <p>Your information is seen only by the server's staff, and is processed by Discord as part of
+     running its platform. We do not sell or share it with anyone else, and we never use it for
+     advertising or to train machine learning or AI models.</p>
 
-  <h2>6. Your choices</h2>
-  <p>Leaving the server stops any new data being collected about you. If you were removed and
-     believe it was in error, or you have questions or requests about data the bot has handled
-     relating to you (including deletion of stored records or moderation records), message our Modmail bot in
-     the Anlatan Discord server. If you were removed and can't reach Modmail, email <a href="mailto:[FALLBACK EMAIL]">[FALLBACK EMAIL]</a>. Block list
-     entries may be kept where needed to protect the server, as far as the law allows.</p>
+  <h2>5. Your choices</h2>
+  <p>Leaving the server stops any new information being collected about you. To ask about the
+     information we hold, or to have it deleted, message our Modmail bot in the Anlatan Discord
+     server. If you can no longer reach the server, email
+     <a href="mailto:[FALLBACK EMAIL]">[FALLBACK EMAIL]</a>. Moderation list entries may be kept
+     where needed to protect the server, as permitted by law.</p>
+
+  <h2>6. Children's privacy</h2>
+  <p>The bot is intended for communities that follow Discord's minimum age requirements and is
+     not directed at children below them.</p>
 
   <h2>7. Changes</h2>
-  <p>We may update this policy as the bot evolves. Material changes will be reflected here with a
-     new effective date.</p>
+  <p>We may update this policy. Material changes will be reflected here with a new effective
+     date.</p>
 
   <h2>8. Contact</h2>
-  <p>Anlatan — Modmail in the Anlatan Discord server, or <a href="mailto:[FALLBACK EMAIL]">[FALLBACK EMAIL]</a> if you can't reach it.</p>
+  <p>Anlatan — Modmail in the Anlatan Discord server, or
+     <a href="mailto:[FALLBACK EMAIL]">[FALLBACK EMAIL]</a> if you can't reach it.</p>
 
   <footer>Anlatan Helper Privacy Policy · Effective 2026-11-10 ·
     <a href="terms.html">Terms of Service</a> · <a href="index.html">Home</a></footer>

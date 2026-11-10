@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anlatan Helper — moderation tools for Discord</title>
+<title>Anlatan Helper — moderation for the Anlatan Discord server</title>
 <style>
   :root { --bg:#0f1115; --card:#171a21; --fg:#e6e8eb; --muted:#9aa3af; --accent:#5865f2; --line:#262b35; }
   * { box-sizing: border-box; }
@@ -29,34 +29,22 @@
 <div class="wrap">
   <header>
     <h1>Anlatan Helper</h1>
-    <p class="tag">Moderation tools for the Anlatan Discord server.</p>
+    <p class="tag">Moderation for the Anlatan Discord server.</p>
   </header>
 
   <div class="card">
     <h2>What it does</h2>
-    <ul>
-      <li><strong>Join screening:</strong> checks new members against the server's account-age
-          rule and staff-maintained allow and block lists, and removes accounts that don't meet
-          them.</li>
-      <li><strong>Name-change log:</strong> posts username, display-name and nickname changes to
-          a moderator-only channel, to help staff spot impersonation and ban evasion.</li>
-      <li><strong>Staff tools:</strong> check whether a list of users is in, or banned from, the
-          server, and add or remove a role for many members at once.</li>
-      <li><strong>Link-preview control:</strong> removes link previews in chosen channels unless
-          the site is allowlisted.</li>
-    </ul>
+    <p>Anlatan Helper is a private moderation bot for the Anlatan Discord server. It helps our
+       moderators screen new members, stay informed of name changes, and manage link previews.</p>
   </div>
 
   <div class="card">
     <h2>Privacy at a glance</h2>
     <ul>
-      <li>Uses the <strong>Server Members</strong> intent for join screening, the name-change
-          log and staff tools, and the <strong>Message Content</strong> intent only to find links
-          in link-restricted channels. It does not use the Presence intent.</li>
-      <li>Message text is processed in memory and <strong>never stored</strong> by the bot.</li>
-      <li>Name history and removal records are kept for <strong>45 days</strong>, then deleted;
-          the long-term record is moderation logs in the server's own moderator-only channels.</li>
-      <li>No data is sold or shared, and none is used to train machine learning or AI models.</li>
+      <li>Records of name changes and moderation actions are deleted from our systems after
+          <strong>45 days</strong>.</li>
+      <li>Message content is never stored in our systems.</li>
+      <li>Nothing is sold or shared, and nothing is used to train AI models.</li>
     </ul>
     <p class="muted">Full details in the <a href="privacy.html">Privacy Policy</a>.</p>
   </div>
@@ -64,11 +52,11 @@
   <div class="links">
     <a href="terms.html">Terms of Service</a>
     <a href="privacy.html">Privacy Policy</a>
-    <a href="mailto:[FALLBACK EMAIL]">Contact</a>
   </div>
 
   <footer>
-    <p>Operated by Anlatan · contact via Modmail in our Discord server, or <a href="mailto:[FALLBACK EMAIL]">[FALLBACK EMAIL]</a><br>
+    <p>Operated by Anlatan · questions via Modmail in our Discord server, or
+       <a href="mailto:[FALLBACK EMAIL]">[FALLBACK EMAIL]</a><br>
        Effective 2026-11-10</p>
   </footer>
 </div>
