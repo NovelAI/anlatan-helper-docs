@@ -48,9 +48,8 @@
         rejoin under a different name.</li>
     <li><strong>The member list.</strong> Kept in memory so staff tools can match usernames, for
         example when checking a list of users or adding a role to many members at once.</li>
-    <li><strong>Message text, in two places only.</strong> In channels where staff have restricted
-        link previews, the bot reads messages to find links. In the contest theme-suggestions
-        thread, it reads suggestions when staff draw a theme. Reading message text requires
+    <li><strong>Message text, in one place only.</strong> In channels where staff have restricted
+        link previews, the bot reads messages to find links. Reading message text requires
         Discord's Message Content intent.</li>
     <li><strong>Contest reactions.</strong> The bot adds an upvote to contest entries and counts
         upvotes when staff tally results.</li>
@@ -71,7 +70,6 @@
     <tr><td>Last-known username and display name</td><td>Recognise members who leave and rejoin under a new name</td><td>While you are a member, then 45 days after you leave</td></tr>
     <tr><td>Allow and block list entries (user ID or username, added by staff)</td><td>Apply the server's join rules</td><td>Until staff remove the entry</td></tr>
     <tr><td>Message text in link-restricted channels</td><td>Find links and remove their previews</td><td>Processed in memory and never stored by the bot</td></tr>
-    <tr><td>Theme-suggestions thread</td><td>Draw a random contest theme</td><td>Read on demand; not stored</td></tr>
     <tr><td>Moderation records (join decisions, removals, name changes, messages whose preview was removed, up to 1,000 characters)</td><td>Posted to private moderator-only log channels for human review</td><td>Stored within Discord, in the server's moderator-only channels</td></tr>
     <tr><td>Server settings (channel, role and server IDs, allowed link domains)</td><td>Configure the bot</td><td>Until changed or removed by staff</td></tr>
     <tr><td>Operational logs (may include user IDs, usernames and message IDs)</td><td>Monitor reliability and troubleshoot</td><td>Console output on the bot host</td></tr>
