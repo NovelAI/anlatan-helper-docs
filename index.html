@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anlatan Helper — moderation and community tools for Discord</title>
+<style>
+  :root { --bg:#0f1115; --card:#171a21; --fg:#e6e8eb; --muted:#9aa3af; --accent:#5865f2; --line:#262b35; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+         background:var(--bg); color:var(--fg); }
+  .wrap { max-width:760px; margin:0 auto; padding:48px 24px 80px; }
+  header { text-align:center; margin-bottom:40px; }
+  h1 { font-size:2.4rem; margin:.2em 0; }
+  .tag { color:var(--muted); font-size:1.05rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px 28px; margin:20px 0; }
+  h2 { font-size:1.25rem; margin-top:0; }
+  ul { padding-left:1.2em; }
+  li { margin:.3em 0; }
+  .muted { color:var(--muted); }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .links { display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:28px; }
+  .links a { border:1px solid var(--line); padding:10px 18px; border-radius:8px; }
+  footer { text-align:center; color:var(--muted); font-size:.9rem; margin-top:48px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Anlatan Helper</h1>
+    <p class="tag">Moderation and community tools for the Anlatan Discord server.</p>
+  </header>
+
+  <div class="card">
+    <h2>What it does</h2>
+    <ul>
+      <li><strong>Join screening:</strong> checks new members against the server's account-age
+          rule and staff-maintained allow and block lists, and removes accounts that don't meet
+          them.</li>
+      <li><strong>Name-change log:</strong> posts username, display-name and nickname changes to
+          a moderator-only channel, to help staff spot impersonation and ban evasion.</li>
+      <li><strong>Staff tools:</strong> check whether a list of users is in, or banned from, the
+          server, and add or remove a role for many members at once.</li>
+      <li><strong>Link-preview control:</strong> removes link previews in chosen channels unless
+          the site is allowlisted.</li>
+      <li><strong>Community contests:</strong> upvotes entries, tallies results, and draws themes
+          from the suggestions thread.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Privacy at a glance</h2>
+    <ul>
+      <li>Uses the <strong>Server Members</strong> intent for join screening, the name-change
+          log and staff tools, and the <strong>Message Content</strong> intent only to find links
+          in link-restricted channels and to read the theme-suggestions thread. It does not use
+          the Presence intent.</li>
+      <li>Message text is processed in memory and <strong>never stored</strong> by the bot.</li>
+      <li>Name history and removal records are kept for <strong>45 days</strong>, then deleted;
+          the long-term record is moderation logs in the server's own moderator-only channels.</li>
+      <li>No data is sold or shared, and none is used to train machine learning or AI models.</li>
+    </ul>
+    <p class="muted">Full details in the <a href="privacy.html">Privacy Policy</a>.</p>
+  </div>
+
+  <div class="links">
+    <a href="terms.html">Terms of Service</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="mailto:[FALLBACK EMAIL]">Contact</a>
+  </div>
+
+  <footer>
+    <p>Operated by Anlatan · contact via Modmail in our Discord server, or <a href="mailto:[FALLBACK EMAIL]">[FALLBACK EMAIL]</a><br>
+       Effective 2026-11-10</p>
+  </footer>
+</div>
+</body>
+</html>
